@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>URL 參數解析器</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="logo">URL 參數解析</div>
+      <p class="subtitle">輸入或貼上網址，快速取得查詢參數。</p>
+    </header>
+    <div class="card input-card">
+      <label for="urlInput" class="label">網址</label>
+      <div class="input-row">
+        <input id="urlInput" type="text" placeholder="https://example.com?foo=bar&lang=zh-TW" />
+        <button id="parseBtn">解析</button>
+      </div>
+    </div>
+    <div class="card result-card">
+      <div class="label">解析結果</div>
+      <div id="result" class="result"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
+
