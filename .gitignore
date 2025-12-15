@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Node / tooling artifacts
+node_modules/
+dist/
+build/
+coverage/
+
+# Logs & environment
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env
+.env.*
+
