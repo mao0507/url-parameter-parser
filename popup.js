@@ -1,6 +1,16 @@
 const urlInput = document.getElementById('urlInput');
 const parseBtn = document.getElementById('parseBtn');
 const resultEl = document.getElementById('result');
+const toastEl = document.getElementById('toast');
+
+function showToast(message) {
+  if (!toastEl) return;
+  toastEl.textContent = message;
+  toastEl.classList.add('show');
+  setTimeout(() => {
+    toastEl.classList.remove('show');
+  }, 1200);
+}
 
 function renderParams(params) {
   resultEl.innerHTML = '';
@@ -21,8 +31,9 @@ function renderParams(params) {
     copyBtn.className = 'copy-btn';
     copyBtn.textContent = '複製';
     copyBtn.addEventListener('click', () => {
-      const text = `${key}=${value}`;
+      const text = `${value}`;
       navigator.clipboard?.writeText(text).catch(() => {});
+      showToast('已複製');
       copyBtn.textContent = '已複製';
       setTimeout(() => {
         copyBtn.textContent = '複製';
