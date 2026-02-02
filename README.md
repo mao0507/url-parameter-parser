@@ -2,6 +2,8 @@
 
 一個簡單的 Chrome 擴充套件，點擊工具列圖示即可開啟 popup，輸入或貼上網址後解析並列出查詢參數。每個參數可一鍵複製 `key=value` 至剪貼簿。
 
+[點我查看](https://chromewebstore.google.com/detail/jcgpgkhghdihmnodddjgpimmhfegnhdj?utm_source=item-share-cb)
+
 ## 功能
 - 輸入或貼上網址，自動解析 query string。
 - 以卡片式版面清楚列出參數。
