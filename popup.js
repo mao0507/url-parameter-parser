@@ -1,3 +1,19 @@
+function t(key) {
+  return chrome.i18n.getMessage(key) || key;
+}
+
+function localizePage() {
+  document.documentElement.lang = chrome.i18n.getMessage('@@ui_locale').replace('_', '-');
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    el.textContent = t(el.dataset.i18n);
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    el.placeholder = t(el.dataset.i18nPlaceholder);
+  });
+}
+
+localizePage();
+
 const urlInput = document.getElementById('urlInput');
 const parseBtn = document.getElementById('parseBtn');
 const resultEl = document.getElementById('result');
@@ -15,7 +31,7 @@ function showToast(message) {
 function renderParams(params) {
   resultEl.innerHTML = '';
   if ([...params].length === 0) {
-    resultEl.innerHTML = '<div class="empty">沒有查詢參數</div>';
+    resultEl.innerHTML = `<div class="empty">${t('noParams')}</div>`;
     return;
   }
   params.forEach((value, key) => {
@@ -29,14 +45,14 @@ function renderParams(params) {
     v.textContent = value;
     const copyBtn = document.createElement('button');
     copyBtn.className = 'copy-btn';
-    copyBtn.textContent = '複製';
+    copyBtn.textContent = t('copy');
     copyBtn.addEventListener('click', () => {
       const text = `${value}`;
       navigator.clipboard?.writeText(text).catch(() => {});
-      showToast('已複製');
-      copyBtn.textContent = '已複製';
+      showToast(t('copied'));
+      copyBtn.textContent = t('copied');
       setTimeout(() => {
-        copyBtn.textContent = '複製';
+        copyBtn.textContent = t('copy');
       }, 1200);
     });
     row.appendChild(k);
@@ -49,7 +65,7 @@ function renderParams(params) {
 function parseUrl() {
   const input = urlInput.value.trim();
   if (!input) {
-    resultEl.innerHTML = '<div class="empty">請輸入網址</div>';
+    resultEl.innerHTML = `<div class="empty">${t('emptyInput')}</div>`;
     return;
   }
   try {
@@ -57,7 +73,7 @@ function parseUrl() {
     const url = new URL(normalized);
     renderParams(url.searchParams);
   } catch (err) {
-    resultEl.innerHTML = '<div class="empty">網址格式不正確</div>';
+    resultEl.innerHTML = `<div class="empty">${t('invalidUrl')}</div>`;
   }
 }
 

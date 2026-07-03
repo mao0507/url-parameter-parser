@@ -1,11 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "URL 參數解析器",
+  "name": "__MSG_appName__",
   "version": "1.0.2",
-  "description": "輸入網址並解析 query 參數。",
+  "description": "__MSG_appDesc__",
+  "default_locale": "zh_TW",
   "action": {
     "default_popup": "popup.html",
-    "default_title": "URL 參數解析器",
+    "default_title": "__MSG_appName__",
     "default_icon": {
       "16": "icon.png"
     }
