@@ -2,6 +2,24 @@ const urlInput = document.getElementById('urlInput');
 const parseBtn = document.getElementById('parseBtn');
 const resultEl = document.getElementById('result');
 const toastEl = document.getElementById('toast');
+const closeBtn = document.getElementById('closeBtn');
+const shortcutHint = document.getElementById('shortcutHint');
+
+const isWindowMode = new URLSearchParams(location.search).get('mode') === 'window';
+
+if (isWindowMode) {
+  document.body.classList.add('window-mode');
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') window.close();
+  });
+  closeBtn.addEventListener('click', () => window.close());
+} else {
+  const isMac = /mac/i.test(navigator.platform);
+  const key = isMac ? '⌘⇧U' : 'Ctrl+Shift+U';
+  shortcutHint.innerHTML = `快捷鍵：<kbd>${key}</kbd> 可直接在畫面中間開啟`;
+}
+
+urlInput.focus();
 
 function showToast(message) {
   if (!toastEl) return;

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "URL 參數解析器",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "輸入網址並解析 query 參數。",
   "action": {
     "default_popup": "popup.html",
@@ -15,6 +15,18 @@
     "32": "icon.png",
     "48": "icon.png",
     "128": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "open-quick-input": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U",
+        "mac": "Command+Shift+U"
+      },
+      "description": "快速開啟 URL 解析器"
+    }
   },
   "permissions": []
 }

@@ -8,8 +8,12 @@
 <body>
   <div class="container">
     <header class="hero">
-      <div class="logo">URL 參數解析</div>
+      <div class="hero-top">
+        <div class="logo">URL 參數解析</div>
+        <button id="closeBtn" class="close-btn" title="關閉 (Esc)" aria-label="關閉">✕</button>
+      </div>
       <p class="subtitle">輸入或貼上網址，快速取得查詢參數。</p>
+      <p class="shortcut-hint" id="shortcutHint"></p>
     </header>
     <div class="card input-card">
       <label for="urlInput" class="label">網址</label>
