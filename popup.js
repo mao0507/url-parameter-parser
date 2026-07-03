@@ -13,13 +13,24 @@ if (isWindowMode) {
     if (e.key === 'Escape') window.close();
   });
   closeBtn.addEventListener('click', () => window.close());
+  // chrome.windows.create 建立視窗時 OS focus 比 JS 慢，需延遲才能成功 focus
+  setTimeout(() => urlInput.focus(), 50);
+  // 視窗重新取得 focus 時也自動回到輸入框
+  window.addEventListener('focus', () => urlInput.focus());
 } else {
   const isMac = /mac/i.test(navigator.platform);
   const key = isMac ? '⌘⇧U' : 'Ctrl+Shift+U';
   shortcutHint.innerHTML = `快捷鍵：<kbd>${key}</kbd> 可直接在畫面中間開啟`;
+  urlInput.focus();
 }
 
-urlInput.focus();
+// Enter 鍵全域觸發解析；button 元素上的 Enter 由瀏覽器轉為 click 自動處理
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && e.target.tagName !== 'BUTTON') {
+    e.preventDefault();
+    parseUrl();
+  }
+});
 
 function showToast(message) {
   if (!toastEl) return;
@@ -80,7 +91,4 @@ function parseUrl() {
 }
 
 parseBtn.addEventListener('click', parseUrl);
-urlInput.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') parseUrl();
-});
 
