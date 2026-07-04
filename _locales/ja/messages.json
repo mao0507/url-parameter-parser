@@ -1,0 +1,41 @@
+{
+  "appName": {
+    "message": "URL パラメータ解析ツール"
+  },
+  "appDesc": {
+    "message": "URL を入力してクエリパラメータを解析します。"
+  },
+  "logo": {
+    "message": "URL パラメータ解析"
+  },
+  "subtitle": {
+    "message": "URL を入力または貼り付けて、クエリパラメータをすばやく取得。"
+  },
+  "urlLabel": {
+    "message": "URL"
+  },
+  "urlPlaceholder": {
+    "message": "https://example.com?foo=bar&lang=ja"
+  },
+  "parseBtn": {
+    "message": "解析"
+  },
+  "resultLabel": {
+    "message": "解析結果"
+  },
+  "emptyInput": {
+    "message": "URL を入力してください"
+  },
+  "invalidUrl": {
+    "message": "URL の形式が正しくありません"
+  },
+  "noParams": {
+    "message": "クエリパラメータはありません"
+  },
+  "copy": {
+    "message": "コピー"
+  },
+  "copied": {
+    "message": "コピー済み"
+  }
+}

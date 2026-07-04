@@ -1,0 +1,41 @@
+{
+  "appName": {
+    "message": "URL 參數解析器"
+  },
+  "appDesc": {
+    "message": "輸入網址並解析 query 參數。"
+  },
+  "logo": {
+    "message": "URL 參數解析"
+  },
+  "subtitle": {
+    "message": "輸入或貼上網址，快速取得查詢參數。"
+  },
+  "urlLabel": {
+    "message": "網址"
+  },
+  "urlPlaceholder": {
+    "message": "https://example.com?foo=bar&lang=zh-TW"
+  },
+  "parseBtn": {
+    "message": "解析"
+  },
+  "resultLabel": {
+    "message": "解析結果"
+  },
+  "emptyInput": {
+    "message": "請輸入網址"
+  },
+  "invalidUrl": {
+    "message": "網址格式不正確"
+  },
+  "noParams": {
+    "message": "沒有查詢參數"
+  },
+  "copy": {
+    "message": "複製"
+  },
+  "copied": {
+    "message": "已複製"
+  }
+}

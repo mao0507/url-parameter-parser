@@ -1,0 +1,41 @@
+{
+  "appName": {
+    "message": "URL 参数解析器"
+  },
+  "appDesc": {
+    "message": "输入网址并解析 query 参数。"
+  },
+  "logo": {
+    "message": "URL 参数解析"
+  },
+  "subtitle": {
+    "message": "输入或粘贴网址，快速获取查询参数。"
+  },
+  "urlLabel": {
+    "message": "网址"
+  },
+  "urlPlaceholder": {
+    "message": "https://example.com?foo=bar&lang=zh-CN"
+  },
+  "parseBtn": {
+    "message": "解析"
+  },
+  "resultLabel": {
+    "message": "解析结果"
+  },
+  "emptyInput": {
+    "message": "请输入网址"
+  },
+  "invalidUrl": {
+    "message": "网址格式不正确"
+  },
+  "noParams": {
+    "message": "没有查询参数"
+  },
+  "copy": {
+    "message": "复制"
+  },
+  "copied": {
+    "message": "已复制"
+  }
+}
