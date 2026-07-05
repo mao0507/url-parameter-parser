@@ -8,8 +8,8 @@
     if (overlay.classList.contains('visible')) {
       overlay.classList.remove('visible');
     } else {
-      overlay.classList.add('visible');
-      existing.shadowRoot.querySelector('#urlInput').focus();
+    overlay.classList.add('visible');
+    setTimeout(() => existing.shadowRoot.querySelector('#urlInput').focus(), 0);
     }
     return;
   }
