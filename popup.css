@@ -31,6 +31,23 @@ body {
   font-size: 13px;
 }
 
+.shortcut-hint {
+  margin: 0;
+  color: #9aa3b5;
+  font-size: 11px;
+}
+
+.shortcut-hint kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  background: #eef1f8;
+  border: 1px solid #d1d9e8;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 11px;
+  color: #596070;
+}
+
 .card {
   background: #fff;
   border-radius: 12px;
@@ -178,4 +195,3 @@ button:active {
   opacity: 1;
   transform: translate(-50%, -4px);
 }
-

@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
   "name": "__MSG_appName__",
-  "version": "1.0.2",
   "description": "__MSG_appDesc__",
   "default_locale": "zh_TW",
+  "version": "1.1.0",
   "action": {
     "default_popup": "popup.html",
     "default_title": "__MSG_appName__",
@@ -17,6 +17,18 @@
     "48": "icon.png",
     "128": "icon.png"
   },
-  "permissions": []
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "open-quick-input": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U",
+        "mac": "Command+Shift+U"
+      },
+      "description": "快速開啟 URL 解析器"
+    }
+  },
+  "permissions": ["activeTab", "scripting"]
 }
 
