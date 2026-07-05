@@ -1,21 +1,13 @@
-const POPUP_W = 400;
-const POPUP_H = 540;
-
-chrome.commands.onCommand.addListener((command) => {
+chrome.commands.onCommand.addListener(async (command, tab) => {
   if (command !== 'open-quick-input') return;
+  if (!tab?.id || !tab.url || /^chrome(-extension)?:\/\//.test(tab.url)) return;
 
-  chrome.windows.getCurrent({ populate: false }, (win) => {
-    const left = Math.max(0, Math.round(win.left + (win.width - POPUP_W) / 2));
-    const top = Math.max(0, Math.round(win.top + (win.height - POPUP_H) / 2));
-
-    chrome.windows.create({
-      url: chrome.runtime.getURL('popup.html') + '?mode=window',
-      type: 'popup',
-      width: POPUP_W,
-      height: POPUP_H,
-      left,
-      top,
-      focused: true
+  try {
+    await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      files: ['content.js']
     });
-  });
+  } catch {
+    // 受限頁面（chrome://、擴充套件頁面）無法注入，靜默忽略
+  }
 });

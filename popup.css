@@ -7,12 +7,6 @@ body {
   color: #1f2430;
 }
 
-body.window-mode {
-  width: auto;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -25,50 +19,10 @@ body.window-mode {
   gap: 4px;
 }
 
-.hero-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .logo {
   font-weight: 800;
   font-size: 18px;
   letter-spacing: 0.3px;
-}
-
-.close-btn {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  padding: 0;
-  min-width: unset;
-  background: transparent;
-  border: 1px solid #d1d9e8;
-  border-radius: 8px;
-  color: #7a8293;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: none;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-
-.close-btn:hover {
-  background: #f0f4ff;
-  color: #334155;
-  transform: none;
-  box-shadow: none;
-}
-
-.close-btn:active {
-  transform: none;
-}
-
-body.window-mode .close-btn {
-  display: flex;
 }
 
 .subtitle {
@@ -92,15 +46,6 @@ body.window-mode .close-btn {
   font-family: inherit;
   font-size: 11px;
   color: #596070;
-}
-
-body.window-mode .shortcut-hint {
-  display: none;
-}
-
-body.window-mode .result {
-  max-height: 260px;
-  overflow-y: auto;
 }
 
 .card {
@@ -250,4 +195,3 @@ button:active {
   opacity: 1;
   transform: translate(-50%, -4px);
 }
-

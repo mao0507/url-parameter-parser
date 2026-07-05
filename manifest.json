@@ -28,6 +28,6 @@
       "description": "快速開啟 URL 解析器"
     }
   },
-  "permissions": []
+  "permissions": ["activeTab", "scripting"]
 }
 
