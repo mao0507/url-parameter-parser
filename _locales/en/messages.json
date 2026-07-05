@@ -1,0 +1,41 @@
+{
+  "appName": {
+    "message": "URL Query Parser"
+  },
+  "appDesc": {
+    "message": "Enter a URL and parse its query parameters."
+  },
+  "logo": {
+    "message": "URL Query Parser"
+  },
+  "subtitle": {
+    "message": "Type or paste a URL to quickly get its query parameters."
+  },
+  "urlLabel": {
+    "message": "URL"
+  },
+  "urlPlaceholder": {
+    "message": "https://example.com?foo=bar&lang=en"
+  },
+  "parseBtn": {
+    "message": "Parse"
+  },
+  "resultLabel": {
+    "message": "Result"
+  },
+  "emptyInput": {
+    "message": "Please enter a URL"
+  },
+  "invalidUrl": {
+    "message": "Invalid URL format"
+  },
+  "noParams": {
+    "message": "No query parameters"
+  },
+  "copy": {
+    "message": "Copy"
+  },
+  "copied": {
+    "message": "Copied"
+  }
+}

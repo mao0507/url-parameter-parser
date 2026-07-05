@@ -1,26 +1,26 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html>
 <head>
   <meta charset="UTF-8" />
-  <title>URL 參數解析器</title>
+  <title data-i18n="appName">URL 參數解析器</title>
   <link rel="stylesheet" href="popup.css" />
 </head>
 <body>
   <div class="container">
     <header class="hero">
-      <div class="logo">URL 參數解析</div>
-      <p class="subtitle">輸入或貼上網址，快速取得查詢參數。</p>
+      <div class="logo" data-i18n="logo">URL 參數解析</div>
+      <p class="subtitle" data-i18n="subtitle">輸入或貼上網址，快速取得查詢參數。</p>
       <p class="shortcut-hint" id="shortcutHint"></p>
     </header>
     <div class="card input-card">
-      <label for="urlInput" class="label">網址</label>
+      <label for="urlInput" class="label" data-i18n="urlLabel">網址</label>
       <div class="input-row">
-        <input id="urlInput" type="text" placeholder="https://example.com?foo=bar&lang=zh-TW" />
-        <button id="parseBtn">解析</button>
+        <input id="urlInput" type="text" data-i18n-placeholder="urlPlaceholder" placeholder="https://example.com?foo=bar&lang=zh-TW" />
+        <button id="parseBtn" data-i18n="parseBtn">解析</button>
       </div>
     </div>
     <div class="card result-card">
-      <div class="label">解析結果</div>
+      <div class="label" data-i18n="resultLabel">解析結果</div>
       <div id="result" class="result"></div>
     </div>
   </div>
